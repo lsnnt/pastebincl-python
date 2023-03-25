@@ -4,7 +4,7 @@ import requests
 api_key = ''
 
 # Specify the file path
-file_path = '/home/test/flags.json'
+file_path = input("input file path ==> ")
 
 # Read the content of the file
 with open(file_path, 'r') as f:
@@ -22,9 +22,12 @@ data = {
 response = requests.post(api_url, data=data)
 
 # Print the Pastebin URL if successful
+f=open("logs.txt","a")
 if response.ok:
     print('File uploaded to Pastebin:')
     print(response.text)
+	f.writelines(f"{file_path}====>>{response.text}")
+	f.close()
 else:
     print('Error uploading file to Pastebin')
-
+	f.close()
