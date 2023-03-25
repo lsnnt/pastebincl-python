@@ -1,7 +1,7 @@
 import requests
 
 # Replace with your developer API key
-api_key = 'LQR2wg5QWv4ZTI7_smidulNQCB-2MvAf'
+api_key = ''
 
 # Specify the file path
 file_path = '/home/test/flags.json'
